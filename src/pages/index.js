@@ -7,6 +7,30 @@ import SEO from "../components/seo"
 import Section from "../components/Section"
 
 import Card from "./../components/Card"
+import staticData from "../../staticdata.json"
+import styled from "styled-components"
+
+console.log("STATIC:", staticData)
+
+const SectionCaption = styled.p`
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #94a4ba;
+  text-align: center;
+`
+
+const SectionCellGroup = styled.div`
+  max-width: 800px;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  padding: 0 20px;
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`
 
 const IndexPage = () => (
   <Layout>
@@ -83,6 +107,17 @@ const IndexPage = () => (
         title="React for Designers"
         text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur praesentium neque impedit odit totam esse placeat dicta illo voluptatum"
       />
+      <SectionCaption>12 sections - 6 hours</SectionCaption>
+      {/* <SectionCellGroup>
+        {staticData.cells.map(cell => (
+          <Cell title={cell.title} image={cell.image} />
+        ))}
+      </SectionCellGroup> */}
+      <SectionCellGroup>
+        {staticData.cells.map(cell => {
+          return <div>{cell.title}</div>
+        })}
+      </SectionCellGroup>
     </div>
   </Layout>
 )
