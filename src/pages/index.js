@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 // import Image from "../components/image"
 import SEO from "../components/seo"
+import Section from "../components/Section"
 
 import Card from "./../components/Card"
 
@@ -76,6 +77,12 @@ const IndexPage = () => (
           />
         </div>
       </div>
+      <Section
+        image={require("../images/wallpaper2.jpg")}
+        logo={require("../images/logo-react.png")}
+        title="React for Designers"
+        text="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur praesentium neque impedit odit totam esse placeat dicta illo voluptatum"
+      />
     </div>
   </Layout>
 )

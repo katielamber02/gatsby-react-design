@@ -7,7 +7,7 @@ import "./Header.css"
 const Header = () => {
   const [hasScrolled, setHeader] = useState(false)
   const handleScroll = event => {
-    console.log(event)
+    // console.log(event)
     const scrollTop = window.pageYOffset
 
     if (scrollTop > 50) {
@@ -18,6 +18,9 @@ const Header = () => {
   }
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
+    return () => {
+      console.log("unmount")
+    }
   }, [hasScrolled])
 
   return (
