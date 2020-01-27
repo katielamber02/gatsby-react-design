@@ -10,7 +10,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <div className="Hero">
       <div className="HeroGroup">
-        <h1>Hi people</h1>
+        <h1>H1 text Lorem ipsum dolor</h1>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
           sapiente ipsa possimus voluptas officia laborum harum illum rem
